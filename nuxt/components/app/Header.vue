@@ -31,27 +31,6 @@ const userItems = [
   ],
 ];
 
-const navItems = [
-  {
-    label: "Nuxt.js Docs",
-    to: "https://nuxt.com/docs/getting-started/introduction",
-    target: "_blank",
-    icon: "i-heroicons-link-20-solid",
-  },
-  {
-    label: "Nuxt UI",
-    to: "https://ui.nuxt.com/getting-started",
-    target: "_blank",
-    icon: "i-heroicons-link-20-solid",
-  },
-  {
-    label: "Laravel 11.x",
-    to: "https://laravel.com/docs/11.x",
-    target: "_blank",
-    icon: "i-heroicons-link-20-solid",
-  },
-];
-
 const isSideOpen = ref(false);
 const openSide = () => {
   isSideOpen.value = true;
@@ -73,19 +52,6 @@ defineShortcuts({
   >
     <UContainer class="flex items-center justify-between gap-3 h-16 py-2">
       <AppLogo class="lg:flex-1" />
-
-      <nav class="hidden lg:flex">
-        <ul class="flex flex-col items-end lg:flex-row lg:items-center lg:gap-x-8">
-          <li v-for="item in navItems" class="relative">
-            <NuxtLink
-              class="text-sm/6 font-semibold flex items-center gap-1 hover:text-primary"
-              :to="item.to"
-              :target="item.target"
-              >{{ item.label }}</NuxtLink
-            >
-          </li>
-        </ul>
-      </nav>
 
       <div class="flex items-center justify-end gap-3 lg:flex-1">
         <AppTheme />
